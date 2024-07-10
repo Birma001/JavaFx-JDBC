@@ -14,7 +14,7 @@ import java.sql.*;
 public class DBUtils {
 
     public static void changeScene(ActionEvent event, String fxmlFile, String title, String username, String note) {
-        Parent root = null;
+        Parent root;
 
         try {
             FXMLLoader loader = new FXMLLoader(DBUtils.class.getResource(fxmlFile));
@@ -51,7 +51,7 @@ public class DBUtils {
         ResultSet resultSet = null;
 
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/users", "root", "root");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/users", "root", "");
             psCheckUserExists = connection.prepareStatement("SELECT * FROM users WHERE username = ?");
             psCheckUserExists.setString(1, username);
             resultSet = psCheckUserExists.executeQuery();
@@ -84,7 +84,7 @@ public class DBUtils {
         ResultSet resultSet = null;
 
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/users", "root", "123");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/users", "root", "");
             preparedStatement = connection.prepareStatement("SELECT password, note FROM users WHERE username = ?");
             preparedStatement.setString(1, username);
             resultSet = preparedStatement.executeQuery();

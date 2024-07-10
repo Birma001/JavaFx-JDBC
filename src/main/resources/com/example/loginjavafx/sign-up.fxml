@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loginjavafx.SignUpController">
    <children>
       <AnchorPane prefHeight="400.0" prefWidth="261.0" style="-fx-background-color: #FED700;">
          <children>
@@ -70,7 +70,7 @@
                   <Font name="Arial Rounded MT Bold" size="14.0" />
                </font>
             </Label>
-            <Button fx:id="button_login" layoutX="220.0" layoutY="345.0" mnemonicParsing="false" style="-fx-background-color: transperant; -fx-cursor: hand;" text="login" textFill="#003bff" underline="true">
+            <Button fx:id="button_login" layoutX="220.0" layoutY="345.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-cursor: hand;" text="login" textFill="#003bff" underline="true">
                <font>
                   <Font name="Arial Rounded MT Bold" size="14.0" />
                </font>
